@@ -85,25 +85,25 @@ function finalScore(/*code Here*/){
 /* Task 4: 
 
 Create a function called `scoreboard` that accepts the following parameters: 
+(1) Callback function `getInningScore`
+(2) Callback function `inning` that you wrote above
+(3) A number of innings
 
-(1) Callback function `inning` that you wrote above
-(2) A number of innings
+and returns the score at each point in the game, like so:
 
-and returns the score at each pont in the game, like so:
+1st inning: 0 - 2         1st inning: awayTeam - homeTeam
+2nd inning: 1 - 3         2nd inning: awayTeam - homeTeam
+3rd inning: 1 - 3         3rd inning: awayTeam - homeTeam
+4th inning: 2 - 4         4th inning: awayTeam - homeTeam
+5th inning: 4 - 6         5th inning: awayTeam - homeTeam
+6th inning: 4 - 6         6th inning: awayTeam - homeTeam
+7th inning: 4 - 6         7th inning: awayTeam - homeTeam
+8th inning: 5 - 8         8th inning: awayTeam - homeTeam
+9th inning: 6 - 10        9th inning: awayTeam - homeTeam
 
-1st inning: 0 - 2
-2nd inning: 1 - 3
-3rd inning: 1 - 3
-4th inning: 2 - 4
-5th inning: 4 - 6
-6th inning: 4 - 6
-7th inning: 4 - 6
-8th inning: 5 - 8
-9th inning: 6 - 10
+Final Score: 6 - 10       Final Score: awayTeam - homeTeam */
 
-Final Score: 6 - 10 */
-
-function scoreboard(/* CODE HERE */) {
+function scoreboard(getInningScore,inning,num) {
   /* CODE HERE */
 }
 
