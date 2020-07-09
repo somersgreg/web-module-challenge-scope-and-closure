@@ -27,7 +27,7 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ * "Persistence of the data"-Nathan Brown (instructor)
  *    2 declares outside the function. The function has access to it. A Higher-Order function is a function that receives a function as an argument or returns the function as output.
  * 
  * 2. Which of the two uses a closure? How can you tell?
@@ -138,4 +138,4 @@ function suffix(){  // I can do as a variable?
   }
   console.log(`Final Score : ${score.Home} - ${score.Away}`);
 }
-(scoreboard(inning, 9));
+scoreboard(inning, 9);
