@@ -20,13 +20,13 @@ function processFirstItem(stringList, callback) {
 
 // ⭐️ Example Challenge END ⭐️
 
-
 ///// M V P ///////
 
 /* Task 1: `counterMaker`
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ * 
  * "Persistence of the data"-Nathan Brown (instructor)
  *    2 declares outside the function. The function has access to it. A Higher-Order function is a function that receives a function as an argument or returns the function as output.
  * 
@@ -57,7 +57,6 @@ function counter2() {
   return count++;
 }
 
-
 /* Task 2: inning() 
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
@@ -67,7 +66,12 @@ function inning(){  // I DONT GET EXACTLY WHY IM NOT USING A PARAM
     points = Math.floor(Math.random()*3);
     return points;
 }
-console.log(inning())
+console.log('rndScore1: ',inning())
+console.log('rndScore2: ',inning())
+console.log('rndScore3: ',inning())
+console.log('rndScore4: ',inning())
+console.log('rndScore5: ',inning())
+
 /* Task 3: finalScore()
 
 Write a higher order function called `finalScore` that accepts the callback function `inning` (from above) and a number of innings and and returns the final score of the game in the form of an object.
@@ -102,7 +106,6 @@ function finalScore(inning, inningNum){
 }
 console.log(finalScore(inning,9));
 
-
 /* Task 4: 
 Create a function called `scoreboard` that accepts the following parameters: 
 (1) Callback function `getInningScore`
@@ -116,6 +119,7 @@ and returns the score at each point in the game, like so:
 9th inning: awayTeam - homeTeam
 Final Score: awayTeam - homeTeam */
 console.log(":   :  : :::[TASK 4]::: :  :   :")
+
 function scoreboard(inning,numberInnings) {
   let score = {
     'Home': 0,
@@ -136,6 +140,6 @@ function suffix(){  // I can do as a variable?
 }
     console.log(`${i+1}${suffix()} inning: ${score.Home} - ${score.Away}`);
   }
-  console.log(`Final Score : ${score.Home} - ${score.Away}`);
+  console.log(`Final Score: ${score.Home} - ${score.Away}`);
 }
 scoreboard(inning, 9);
