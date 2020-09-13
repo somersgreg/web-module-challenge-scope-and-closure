@@ -18,6 +18,17 @@ function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 }
 
+function add(a,b){
+    return a + b;
+}  // function is a key word
+
+console.log("add(2,3)", add(2,3))
+
+const add2 = (a,b) => {return [(a+b),(b-a)]} ;
+console.log(" add2",  add2(2,4))
+
+// The HoF takes a Fn as a parameter (callback).
+
 // ⭐️ Example Challenge END ⭐️
 
 ///// M V P ///////
@@ -41,28 +52,29 @@ function processFirstItem(stringList, callback) {
 */
 
 // counter1 code
-function counterMaker() {
-  let count = 0;
-  return function counter() {
-   return count++;
-  }
-}
+// let count = 0;
+// function counterMaker() {
+//   return function boo(){return count=count+1};
+// }
 
-const counter1 = counterMaker();
+// console.log("counterMaker -> count", count)
+// const counter1 = counterMaker();
+// console.log("counter1", counter1)
+// console.log("counterMaker", counterMaker())
 
-// counter2 code
-let count = 0;
+// // counter2 code
+// // let count = 0;
 
-function counter2() {
-  return count++;
-}
+// function counter2() {
+//   return count++;
+// }
 
 /* Task 2: inning()
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 console.log(":   :  : :::[TASK 2]::: :  :   :")
 function inning(){  // I DONT GET EXACTLY WHY IM NOT USING A PARAM
-  let points = 0;  // Could I do this so it will add with each repeat but clear if i ask it to?
+  let points = 0;  // Could I do this so it will add with each repeat but clear if i ask it to?  // It is resetting on call it.
     points = Math.floor(Math.random()*3);
     return points;
 }
@@ -95,12 +107,12 @@ console.log(":   :  : :::[TASK 3]::: :  :   :")
 //}
 // console.log(finalScore(inning,9));
 
-function finalScore(inning, inningNum){
+function finalScore(cb, inningNum){   // inning (param1) isnt the fuctino innin. It s only a placeholder and represents a callback so i changed it to cb.
   let home = 0;
   let away = 0;
   for(let i = 0; i < inningNum; i++){
-    home  = home  + inning();
-    away  = away  + inning();}
+    home  = home  + cb();
+    away  = away  + cb();}
     return {Home: home,
             Away: away}
 }
